@@ -187,7 +187,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    //opacity:0.9
+    opacity: 1;
     visibility: hidden;
 
     &.show {
@@ -235,7 +236,7 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('../dist/img/portrait.jpeg');
+            background: url('../img/portrait.jpg');
             border-radius: 50%;
             border: solid 3px $s-color;
         }
@@ -255,6 +256,7 @@
     }
 
    .nav-link{
+    font-family: 'Kanit', sans-serif;
     display: inline-block;
     position: relative;
     font-size: 30px;

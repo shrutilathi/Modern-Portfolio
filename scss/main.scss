@@ -20,17 +20,19 @@ h1,h2,h3
     font-weight: 400;
 
     &.lg-heading{
+      color:set-text-color($primary-color);
         font-size: 6rem;
     }
 
     &.sm-heading{
+      color:set-text-color($primary-color);
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
         background:(lighten($primary-color,2),0.5);
     }
 }
 a{
-    color:#fff;
+  color:set-text-color($primary-color);
 text-decoration: none;
 }
 
@@ -41,12 +43,69 @@ header{
 }
 
 .text-secondary{
+
     color: $s-color;
+    -webkit-animation:colorchange 20s infinite alternate;
+}
+@-webkit-keyframes colorchange {
+  0% {
+    
+    color: blue;
+  }
+  
+  10% {
+    
+    color: #8e44ad;
+  }
+  
+  20% {
+    
+    color: #1abc9c;
+  }
+  
+  30% {
+    
+    color: #d35400;
+  }
+  
+  40% {
+    
+    color: blue;
+  }
+  
+  50% {
+    
+    color: #34495e;
+  }
+  
+  60% {
+    
+    color: blue;
+  }
+  
+  70% {
+    
+    color: #2980b9;
+  }
+  80% {
+ 
+    color: #f1c40f;
+  }
+  
+  90% {
+ 
+    color: #2980b9;
+  }
+  
+  100% {
+    
+    color: pink;
+  }
 }
 main{
     padding: 4rem;
     // height: 100%;
-    min-height: calc(100vh-60px);
+    min-height: calc(100vh - 60px);
 
     .icons{
         margin-top: 1rem;
@@ -68,14 +127,18 @@ main{
         }
     }
 }
+
 .about-info {
+  color:set-text-color($primary-color);
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
     'bioimage bio bio'
     'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
-
+ a{
+  color:set-text-color($primary-color);
+ }
   .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -132,10 +195,10 @@ grid-template-columns: repeat(3,1fr);
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
-
   div{
+    color:set-text-color($primary-color);
     font-size: 2rem;
-    border: 3px solid white;
+    border: 3px solid set-text-color($primary-color);;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
